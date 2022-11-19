@@ -11,7 +11,7 @@
     }, t.prototype.onEventClick = function(t, n, a) {
         var o = this,
             i = e("<form></form>");
-        i.append("<label>Change event name</label>"), i.append("<div class='input-group'><input class='form-control' type=text value='" + t.title + "' /><span class='input-group-btn'><button type='submit' class='btn btn-success waves-effect waves-light'><i class='fa fa-check'></i> Save</button></span></div>"), o.$modal.modal({
+        i.append("<label>Ubah nama</label>"), i.append("<div class='input-group'><input class='form-control' type=text value='" + t.title + "' /><span class='input-group-btn'><button type='submit' class='btn btn-success waves-effect waves-light'><i class='fa fa-check'></i> Simpan</button></span></div><br><label>No HP</label><div class='input-group'><input class='form-control' type=text value='081331089124' /></div><div><br><label>Waktu Agenda</label><div><input class='form-control' type='time' value='08:00' name='time'/></div>"), o.$modal.modal({
             backdrop: "static"
         }), o.$modal.find(".delete-event").show().end().find(".save-event").hide().end().find(".modal-body").empty().prepend(i).end().find(".delete-event").unbind("click").on("click", function() {
             o.$calendarObj.fullCalendar("removeEvents", function(e) {
@@ -26,7 +26,7 @@
             backdrop: "static"
         });
         var i = e("<form></form>");
-        i.append("<div class='row'></div>"), i.find(".row").append("<div class='col-md-6'><div class='form-group'><label class='control-label'>Event Name</label><input class='form-control' placeholder='Insert Event Name' type='text' name='title'/></div></div>").append("<div class='col-md-6'><div class='form-group'><label class='control-label'>Category</label><select class='form-control' name='category'></select></div></div>").find("select[name='category']").append("<option value='bg-danger'>Danger</option>").append("<option value='bg-success'>Success</option>").append("<option value='bg-dark'>Dark</option>").append("<option value='bg-primary'>Primary</option>").append("<option value='bg-pink'>Pink</option>").append("<option value='bg-info'>Info</option>").append("<option value='bg-warning'>Warning</option></div></div>"), o.$modal.find(".delete-event").hide().end().find(".save-event").show().end().find(".modal-body").empty().prepend(i).end().find(".save-event").unbind("click").on("click", function() {
+        i.append("<div class='row'></div>"), i.find(".row").append("<div class='col-md-6'><div class='form-group'><label class='control-label'>Nama Siswa</label><input class='form-control' placeholder='Masukan Nama siswa PDBK' type='text' name='title'/></div></div>").append("<div class='col-md-6'><div class='form-group'><label class='control-label'>Kategori</label><select class='form-control' name='category'></select></div></div>").append("<div class='col-md-6'><div class='form-group'><label class='control-label'>No Handphone Orang Tua</label><input class='form-control' placeholder='081****' type='text' name='title'/></div></div>").append("<div class='col-md-6'><div class='form-group'><label class='control-label'>Jadwal Agenda</label><input class='form-control' type='time' name='title'/></div></div>").find("select[name='category']").append("<option value='bg-danger'>Tuna Grahita</option>").append("<option value='bg-success'>Autisme</option>").append("<option value='bg-dark'>Slow Learner</option>").append("<option value='bg-warning'>Tuna Daksa</option></div></div>"), o.$modal.find(".delete-event").hide().end().find(".save-event").show().end().find(".modal-body").empty().prepend(i).end().find(".save-event").unbind("click").on("click", function() {
             i.submit()
         }), o.$modal.find("form").on("submit", function() {
             var e = i.find("input[name='title']").val(),
@@ -37,7 +37,7 @@
                 end: n,
                 allDay: !1,
                 className: a
-            }, !0), o.$modal.modal("hide")) : alert("You have to give a title to your event"), !1
+            }, !0), o.$modal.modal("hide")) : alert("Harap masukan nama siswa!"), !1
         }), o.$calendarObj.fullCalendar("unselect")
     }, t.prototype.enableDrag = function() {
         e(this.$event).each(function() {
@@ -55,24 +55,24 @@
         var t = new Date,
             n = (t.getDate(), t.getMonth(), t.getFullYear(), new Date(e.now())),
             a = [{
-                title: "Chicken Burger",
+                title: "Lintang",
                 start: new Date(e.now() + 158e6),
                 className: "bg-dark"
             }, {
-                title: "Soft drinks",
+                title: "Seven",
                 start: n,
                 end: n,
                 className: "bg-danger"
             }, {
-                title: "Hot dog",
+                title: "Wildan",
                 start: new Date(e.now() + 338e6),
                 className: "bg-primary"
             }],
             o = this;
         o.$calendarObj = o.$calendar.fullCalendar({
             slotDuration: "00:15:00",
-            minTime: "08:00:00",
-            maxTime: "19:00:00",
+            minTime: "00:00:00",
+            maxTime: "23:59:59",
             defaultView: "month",
             handleWindowResize: !0,
             height: e(window).height() - 100,
