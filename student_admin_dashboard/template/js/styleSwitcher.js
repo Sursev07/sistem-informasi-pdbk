@@ -19,7 +19,7 @@ jQuery(window).on('load',function(){
 });
 (function($) {
     "use strict"
-	addSwitcher();
+	// addSwitcher();
 
 	
     const body = $('body');
