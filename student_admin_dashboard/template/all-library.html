@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Edumin - Bootstrap Admin Dashboard </title>
+    <title>Sispenma - Materi Pembelajaran</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
     <link rel="stylesheet" href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css">
@@ -42,9 +42,8 @@
         ***********************************-->
         <div class="nav-header">
             <a href="index.html" class="brand-logo">
-                <img class="logo-abbr" src="images/logo-white.png" alt="">
-                <img class="logo-compact" src="images/logo-text-white.png" alt="">
-                <img class="brand-title" src="images/logo-text-white.png" alt="">
+                <span>Sispenma</span>
+                <img class="logo-abbr" src="images/logo-white-2.png" alt="">
             </a>
 
             <div class="nav-control">
@@ -71,7 +70,7 @@
                                 </span>
                                 <div class="dropdown-menu p-0 m-0">
                                     <form>
-                                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                                        <input class="form-control" type="search" placeholder="Cari" aria-label="Cari">
                                     </form>
                                 </div>
                             </div>
@@ -175,24 +174,51 @@
             <div class="dlabnav-scroll">
                 <ul class="metismenu" id="menu">
                     <li class="nav-label first">Main Menu</li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                    <li>
+                        <a class="" href="index.html" aria-expanded="false">
 							<i class="la la-home"></i>
-							<span class="nav-text">Dashboard</span>
+							<span class="nav-text">Beranda</span>
 						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="index.html">Dashboard 1</a></li>
-                            <li><a href="index-2.html">Dashboard 2</a></li>
-                            <li><a href="index-3.html">Dashboard 3</a></li>
-                        </ul>
                     </li>
+                    <li><a class="" href="javascript:void()" aria-expanded="false">
+                        <i class="la la-users"></i>
+                        <span class="nav-text">Siswa</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="all-students.html">All Students</a></li>
+                        <li><a href="add-student.html">Add Students</a></li>
+                        <li><a href="edit-student.html">Edit Students</a></li>
+                        <li><a href="about-student.html">About Students</a></li>
+                    </ul>
+                </li>
+                <li><a class="" href="javascript:void()" aria-expanded="false">
+                        <i class="la la-book"></i>
+                        <span class="nav-text">Materi Pembelajaran</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="all-library.html">Daftar Materi</a></li>
+                        <li><a href="add-library.html">Tambah Library</a></li>
+                    </ul>
+                </li>
+                
 					<li><a class="ai-icon" href="event-management.html" aria-expanded="false">
 							<i class="la la-calendar"></i>
-							<span class="nav-text">Event Management</span>
+							<span class="nav-text">Agenda Konsultasi</span>
 						</a>
                     </li>
-					<li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-							<i class="la la-user"></i>
-							<span class="nav-text">Professors</span>
+                    <li><a class="" href="javascript:void()" aria-expanded="false">
+                        <i class="la la-building"></i>
+                        <span class="nav-text">Kurikulum</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="all-departments.html">All Departments</a></li>
+                        <li><a href="add-departments.html">Add Departments</a></li>
+                        <li><a href="edit-departments.html">Edit Departments</a></li>
+                    </ul>
+                </li>
+					<li><a class="" href="javascript:void()" aria-expanded="false">
+							<i class="la la-graduation-cap"></i>
+							<span class="nav-text">Laporan Perkembangan</span>
 						</a>
                         <ul aria-expanded="false">
                             <li><a href="all-professors.html">All Professor</a></li>
@@ -201,206 +227,7 @@
                             <li><a href="professor-profile.html">Professor Profile</a></li>
                         </ul>
                     </li>
-					<li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-							<i class="la la-users"></i>
-							<span class="nav-text">Students</span>
-						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="all-students.html">All Students</a></li>
-                            <li><a href="add-student.html">Add Students</a></li>
-                            <li><a href="edit-student.html">Edit Students</a></li>
-                            <li><a href="about-student.html">About Students</a></li>
-                        </ul>
-                    </li>
-					<li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-							<i class="la la-graduation-cap"></i>
-							<span class="nav-text">Courses</span>
-						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="all-courses.html">All Courses</a></li>
-                            <li><a href="add-courses.html">Add Courses</a></li>
-                            <li><a href="edit-courses.html">Edit Courses</a></li>
-                            <li><a href="about-courses.html">About Courses</a></li>
-                        </ul>
-                    </li>
-					<li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-							<i class="la la-book"></i>
-							<span class="nav-text">Library</span>
-						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="all-library.html">All Library</a></li>
-                            <li><a href="add-library.html">Add Library</a></li>
-                            <li><a href="edit-library.html">Edit Library</a></li>
-                        </ul>
-                    </li>
-					<li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-							<i class="la la-building"></i>
-							<span class="nav-text">Departments</span>
-						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="all-departments.html">All Departments</a></li>
-                            <li><a href="add-departments.html">Add Departments</a></li>
-                            <li><a href="edit-departments.html">Edit Departments</a></li>
-                        </ul>
-                    </li>
-					<li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-							<i class="la la-users"></i>
-							<span class="nav-text">Staff</span>
-						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="all-staff.html">All Staff</a></li>
-                            <li><a href="add-staff.html">Add Staff</a></li>
-                            <li><a href="edit-staff.html">Edit Staff</a></li>
-                            <li><a href="staff-profile.html">Staff Profile</a></li>
-                        </ul>
-                    </li>
-					<li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-							<i class="la la-gift"></i>
-							<span class="nav-text">Holiday</span>
-						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="all-holiday.html">All Holiday</a></li>
-                            <li><a href="add-holiday.html">Add Holiday</a></li>
-                            <li><a href="edit-holiday.html">Edit Holiday</a></li>
-                            <li><a href="holiday-calendar.html">Holiday Calendar</a></li>
-                        </ul>
-                    </li>
-					<li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-							<i class="la la-dollar"></i>
-							<span class="nav-text">Fees</span>
-						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="fees-collection.html">Fees Collection</a></li>
-                            <li><a href="add-fees.html">Add Fees</a></li>
-                            <li><a href="fees-receipt.html">Fees Receipt</a></li>
-                        </ul>
-                    </li>					
-                    <li class="nav-label">Apps</li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-							<i class="la la-users"></i>
-							<span class="nav-text">Apps</span>
-						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="app-profile.html">Profile</a></li>
-                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
-                                <ul aria-expanded="false">
-                                    <li><a href="email-compose.html">Compose</a></li>
-                                    <li><a href="email-inbox.html">Inbox</a></li>
-                                    <li><a href="email-read.html">Read</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="app-calender.html">Calendar</a></li>
-							<li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Shop</a>
-                                <ul aria-expanded="false">
-                                    <li><a href="ecom-product-grid.html">Product Grid</a></li>
-									<li><a href="ecom-product-list.html">Product List</a></li>
-									<li><a href="ecom-product-detail.html">Product Details</a></li>
-									<li><a href="ecom-product-order.html">Order</a></li>
-									<li><a href="ecom-checkout.html">Checkout</a></li>
-									<li><a href="ecom-invoice.html">Invoice</a></li>
-									<li><a href="ecom-customers.html">Customers</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-							<i class="la la-signal"></i>
-							<span class="nav-text">Charts</span>
-						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="chart-flot.html">Flot</a></li>
-                            <li><a href="chart-morris.html">Morris</a></li>
-                            <li><a href="chart-chartjs.html">Chartjs</a></li>
-                            <li><a href="chart-chartist.html">Chartist</a></li>
-                            <li><a href="chart-sparkline.html">Sparkline</a></li>
-                            <li><a href="chart-peity.html">Peity</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-label">Components</li>
-                    <li class="mega-menu mega-menu-xl"><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-							<i class="la la-globe"></i>
-							<span class="nav-text">Bootstrap</span>
-						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="ui-accordion.html">Accordion</a></li>
-                            <li><a href="ui-alert.html">Alert</a></li>
-                            <li><a href="ui-badge.html">Badge</a></li>
-                            <li><a href="ui-button.html">Button</a></li>
-                            <li><a href="ui-modal.html">Modal</a></li>
-                            <li><a href="ui-button-group.html">Button Group</a></li>
-                            <li><a href="ui-list-group.html">List Group</a></li>
-                            <li><a href="ui-media-object.html">Media Object</a></li>
-                            <li><a href="ui-card.html">Cards</a></li>
-                            <li><a href="ui-carousel.html">Carousel</a></li>
-                            <li><a href="ui-dropdown.html">Dropdown</a></li>
-                            <li><a href="ui-popover.html">Popover</a></li>
-                            <li><a href="ui-progressbar.html">Progressbar</a></li>
-                            <li><a href="ui-tab.html">Tab</a></li>
-                            <li><a href="ui-typography.html">Typography</a></li>
-                            <li><a href="ui-pagination.html">Pagination</a></li>
-                            <li><a href="ui-grid.html">Grid</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-							<i class="la la-plus-square-o"></i>
-							<span class="nav-text">Plugins</span>
-						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="uc-select2.html">Select 2</a></li>
-                            <li><a href="uc-nestable.html">Nestedable</a></li>
-                            <li><a href="uc-noui-slider.html">Noui Slider</a></li>
-                            <li><a href="uc-sweetalert.html">Sweet Alert</a></li>
-                            <li><a href="uc-toastr.html">Toastr</a></li>
-                            <li><a href="map-jqvmap.html">Jqv Map</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="widget-basic.html" aria-expanded="false">
-							<i class="la la-desktop"></i>
-							<span class="nav-text">Widget</span>
-						</a></li>
-                    <li class="nav-label">Forms</li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-							<i class="la la-file-text"></i>
-							<span class="nav-text">Forms</span>
-						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="form-element.html">Form Elements</a></li>
-                            <li><a href="form-wizard.html">Wizard</a></li>
-                            <li><a href="form-editor-summernote.html">Summernote</a></li>
-                            <li><a href="form-pickers.html">Pickers</a></li>
-                            <li><a href="form-validation-jquery.html">Jquery Validate</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-label">Table</li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-							<i class="la la-table"></i>
-							<span class="nav-text">Table</span>
-						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="table-bootstrap-basic.html">Bootstrap</a></li>
-                            <li><a href="table-datatable-basic.html">Datatable</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-label">Extra</li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-							<i class="la la-th-list"></i>
-							<span class="nav-text">Pages</span>
-						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="page-register.html">Register</a></li>
-                            <li><a href="page-login.html">Login</a></li>
-                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
-                                <ul aria-expanded="false">
-                                    <li><a href="page-error-400.html">Error 400</a></li>
-                                    <li><a href="page-error-403.html">Error 403</a></li>
-                                    <li><a href="page-error-404.html">Error 404</a></li>
-                                    <li><a href="page-error-500.html">Error 500</a></li>
-                                    <li><a href="page-error-503.html">Error 503</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="page-lock-screen.html">Lock Screen</a></li>
-                        </ul>
-                    </li>
+					
 				</ul>
             </div>
         </div>
@@ -420,14 +247,14 @@
 				<div class="row page-titles mx-0">
                     <div class="col-sm-6 p-md-0">
                         <div class="welcome-text">
-                            <h4>Library Assets</h4>
+                            <h4>Materi Pembelajaran</h4>
                         </div>
                     </div>
                     <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active"><a href="javascript:void(0);">Library</a></li>
-                            <li class="breadcrumb-item active"><a href="javascript:void(0);">Library Assets</a></li>
+                            <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+                            <li class="breadcrumb-item active"><a href="javascript:void(0);">Materi Pembelajaran</a></li>
+                            <li class="breadcrumb-item active"><a href="javascript:void(0);">Daftar</a></li>
                         </ol>
                     </div>
                 </div>
@@ -436,8 +263,8 @@
 					<div class="col-lg-12">
 						<div class="card">
 							<div class="card-header">
-								<h4 class="card-title">Asset List</h4>
-								<a href="add-library.html" class="btn btn-primary">+ Add new</a>
+								<h4 class="card-title">Daftar Materi</h4>
+								<a href="add-library.html" class="btn btn-primary">+ Tambah Baru</a>
 							</div>
 							<div class="card-body">
 								<div class="table-responsive">
@@ -445,24 +272,20 @@
 										<thead>
 											<tr>
 												<th>#</th>
-												<th>Title</th>
-												<th>Subject</th>
-												<th>Department</th>
-												<th>Year</th>
-												<th>Type</th>
-												<th>Status</th>
-												<th>Action</th>
+												<th>Materi</th>
+												<th>Mata Pelajaran</th>
+												<th>Kurikulum</th>
+												<th>Update Terakhir</th>
+												<th></th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
 												<td><strong>01</strong></td>
-												<td>Technical Author</td>
-												<td>Designing</td>
-												<td>Architecture</td>
-												<td>3 Year</td>
-												<td>Book</td>
-												<td>Out of Stock</td>	
+												<td>Berhitung</td>
+												<td>Matematika</td>
+												<td>2013</td>
+												<td>9 Tahun lalu</td>
 												<td>
                                                     <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
                                                     <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
@@ -470,25 +293,21 @@
 											</tr>
 											<tr>
 												<td><strong>02</strong></td>
-												<td>Team Leader</td>
-												<td>Computer</td>
-												<td>Office Manager</td>
-												<td>2 Year</td>
-												<td>Comics</td>
-												<td>Out of Stock</td>
+												<td>Membaca</td>
+												<td>Bahasa Indonesia</td>
+												<td>2013</td>
+												<td>2 Tahun Lalu</td>
 												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
+                                                    <a href="/student_admin_dashboard/template/edit-library.html" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
                                                     <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
                                                 </td>
 											</tr>
 											<tr>
 												<td><strong>03</strong></td>
-												<td>Software Engineer</td>
-												<td>Computer</td>
-												<td>Architecture</td>
-												<td>1 Year</td>
-												<td>Book</td>
-												<td>In Stock</td>
+												<td>Menulis</td>
+												<td>Bahasa Indonesia</td>
+												<td>2013</td>
+												<td>2 Tahun Lalu</td>
 												<td>
                                                     <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
                                                     <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
@@ -496,12 +315,10 @@
 											</tr>
 											<tr>
 												<td><strong>04</strong></td>
-												<td>Software Engineer</td>
-												<td>Designing</td>
-												<td>Data Entry</td>
-												<td>3 Year</td>
-												<td>Newspaper</td>
-												<td>In Stock</td>
+												<td>Perkalian</td>
+												<td>Matematika</td>
+												<td>2013</td>
+												<td>9 Tahun lalu</td>
 												<td>
                                                     <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
                                                     <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
@@ -509,207 +326,10 @@
 											</tr>
 											<tr>
 												<td><strong>05</strong></td>
-												<td>Marketing Designer</td>
-												<td>Politics</td>
-												<td>Office Manager</td>
-												<td>1 Year</td>
-												<td>Book</td>
-												<td>In Stock</td>
-												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
-                                                </td>
-											</tr>
-											<tr>
-												<td><strong>06</strong></td>
-												<td>Office Manager</td>
-												<td>Computer</td>
-												<td>Data Entry</td>
-												<td>1 Year</td>
-												<td>Newspaper</td>
-												<td>Out of Stock</td>
-												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
-                                                </td>
-											</tr>
-											<tr>
-												<td><strong>07</strong></td>
-												<td>Regional Marketing</td>
-												<td>Science</td>
-												<td>Architecture</td>
-												<td>2 Year</td>
-												<td>Comics</td>
-												<td>In Stock</td>
-												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
-                                                </td>
-											</tr>
-											<tr>
-												<td><strong>08</strong></td>
-												<td>Integration Specialist</td>
-												<td>Designing</td>
-												<td>Office Manager</td>
-												<td>3 Year</td>
-												<td>Newspaper</td>
-												<td>In Stock</td>
-												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
-                                                </td>
-											</tr>
-											<tr>
-												<td><strong>09</strong></td>
-												<td>Integration Specialist</td>
-												<td>Politics</td>
-												<td>Data Entry</td>
-												<td>1 Year</td>
-												<td>Book</td>
-												<td>In Stock</td>
-												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
-                                                </td>
-											</tr>
-											<tr>
-												<td><strong>10</strong></td>
-												<td>Networking</td>
-												<td>B.COM., M.COM.</td>
-												<td>Security Department</td>
-												<td>1 Year</td>
-												<td>Newspaper</td>
-												<td>Out of Stock</td>
-												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
-                                                </td>
-											</tr>
-											<tr>
-												<td><strong>11</strong></td>
-												<td>Javascript Developer</td>
-												<td>Computer</td>
-												<td>Architecture</td>
-												<td>2 Year</td>
-												<td>Newspaper</td>
-												<td>In Stock</td>
-												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
-                                                </td>
-											</tr>
-											<tr>
-												<td><strong>12</strong></td>
-												<td>Javascript Developer</td>
-												<td>Science</td>
-												<td>Security Department</td>
-												<td>3 Year</td>
-												<td>Comics</td>
-												<td>In Stock</td>
-												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
-                                                </td>
-											</tr>
-											<tr>
-												<td><strong>13</strong></td>
-												<td>Javascript Developer</td>
-												<td>Designing</td>
-												<td>Office Manager</td>
-												<td>1 Year</td>
-												<td>Book</td>
-												<td>Out of Stock</td>
-												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
-                                                </td>
-											</tr>
-											<tr>
-												<td><strong>14</strong></td>
-												<td>Javascript Developer</td>
-												<td>Computer</td>
-												<td>Architecture</td>
-												<td>1 Year</td>
-												<td>Comics</td>
-												<td>In Stock</td>
-												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
-                                                </td>
-											</tr>
-											<tr>
-												<td><strong>15</strong></td>
-												<td>Javascript Developer</td>
-												<td>Politics</td>
-												<td>Data Entry</td>
-												<td>2 Year</td>
-												<td>Newspaper</td>
-												<td>In Stock</td>
-												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
-                                                </td>
-											</tr>
-											<tr>
-												<td><strong>16</strong></td>
-												<td>Systems Administrator</td>
-												<td>Science</td>
-												<td>Security Department</td>
-												<td>1 Year</td>
-												<td>Newspaper</td>
-												<td>In Stock</td>
-												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
-                                                </td>
-											</tr>
-											<tr>
-												<td><strong>17</strong></td>
-												<td>Systems Administrator</td>
-												<td>Politics</td>
-												<td>Office Manager</td>
-												<td>3 Year</td>
-												<td>Book</td>
-												<td>Out of Stock</td>
-												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
-                                                </td>
-											</tr>
-											<tr>
-												<td><strong>18</strong></td>
-												<td>Systems Administrator</td>
-												<td>Designing</td>
-												<td>Security Department</td>
-												<td>2 Year</td>
-												<td>Comics</td>
-												<td>In Stock</td>
-												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
-                                                </td>
-											</tr>
-											<tr>
-												<td><strong>19</strong></td>
-												<td>Systems Administrator</td>
-												<td>Computer</td>
-												<td>Data Entry</td>
-												<td>1 Year</td>
-												<td>Comics</td>
-												<td>In Stock</td>
-												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
-                                                </td>
-											</tr>
-											<tr>
-												<td><strong>20</strong></td>
-												<td>Systems Administrator</td>
-												<td>Computer</td>
-												<td>Office Manager</td>
-												<td>2 Year</td>
-												<td>Book</td>
-												<td>In Stock</td>
+												<td>Matematika Dasar</td>
+												<td>Matematika</td>
+												<td>2013</td>
+												<td>9 Tahun Lalu</td>
 												<td>
                                                     <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
                                                     <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>

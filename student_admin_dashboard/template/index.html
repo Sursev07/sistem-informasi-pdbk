@@ -62,16 +62,6 @@
                 <nav class="navbar navbar-expand">
                     <div class="collapse navbar-collapse justify-content-between">
                         <div class="header-left">
-                            <div class="search_bar dropdown">
-                                <span class="search_icon p-3 c-pointer" data-toggle="dropdown">
-                                    <i class="mdi mdi-magnify"></i>
-                                </span>
-                                <div class="dropdown-menu p-0 m-0">
-                                    <form>
-                                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                                    </form>
-                                </div>
-                            </div>
                         </div>
 
                         <ul class="navbar-nav header-right">
@@ -215,16 +205,10 @@
                         <li><a href="edit-departments.html">Edit Departments</a></li>
                     </ul>
                 </li>
-					<li><a class="" href="javascript:void()" aria-expanded="false">
+					<li><a class="" href="laporan-perkembangan-index.html" aria-expanded="false">
 							<i class="la la-graduation-cap"></i>
 							<span class="nav-text">Laporan Perkembangan</span>
 						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="all-professors.html">All Professor</a></li>
-                            <li><a href="add-professor.html">Add Professor</a></li>
-                            <li><a href="edit-professor.html">Edit Professor</a></li>
-                            <li><a href="professor-profile.html">Professor Profile</a></li>
-                        </ul>
                     </li>
 					
 				</ul>
@@ -252,9 +236,9 @@
                                     <form>
                                         <div class="form-group">
                                             <select class="form-control form-control-lg">
-                                                <option>2019/2020</option>
-                                                <option>2020/2021</option>
                                                 <option>2022/2023</option>
+                                                <option>2020/2021</option>
+                                                <option>2019/2020</option>
                                             </select>
                                         </div>
                                     </form>
@@ -262,7 +246,6 @@
                             </div>
                         </div>
 					</div>
-
                     <div class="col-xl-4 col-xxl-4 col-lg-4">
                         <div class="card">
                             <div class="card-header">
@@ -353,228 +336,7 @@
 							</div>
 						</div>
 					</div>
-					<!-- <div class="col-xl-4 col-lg-4 col-xxl-4 col-md-12">
-						<div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Professors List</h4>
-                            </div>
-                            <div class="card-body">
-								<div class="media mb-3 align-items-center border-bottom pb-3">
-                                    <img class="mr-3 rounded-circle" alt="image" width="50" src="images/profile/education/pic1.jpg">
-                                    <div class="media-body">
-                                        <h5 class="mb-0 text-pale-sky">Theodore Handle <small class="text-muted">( B.Com )</small></h5>
-                                        <small class="text-primary mb-0">Available</small>
-									</div>
-								</div>
-								<div class="media mb-3 align-items-center border-bottom pb-3">
-                                    <img class="mr-3 rounded-circle" alt="image" width="50" src="images/profile/education/pic2.jpg">
-                                    <div class="media-body">
-                                        <h5 class="mb-0 text-pale-sky">Bess Willis <small class="text-muted">( M.Com )</small></h5>
-                                        <small class="text-danger mb-0">Not Available</small>
-									</div>
-								</div>
-								<div class="media mb-3 align-items-center border-bottom pb-3">
-                                    <img class="mr-3 rounded-circle" alt="image" width="50" src="images/profile/education/pic3.jpg">
-                                    <div class="media-body">
-                                        <h5 class="mb-0 text-pale-sky">James Jones <small class="text-muted">( M.Tach  )</small></h5>
-                                        <small class="text-primary mb-0">Available</small>
-									</div>
-								</div>
-								<div class="media mb-3 align-items-center border-bottom pb-3">
-                                    <img class="mr-3 rounded-circle" alt="image" width="50" src="images/profile/education/pic4.jpg">
-                                    <div class="media-body">
-                                        <h5 class="mb-0 text-pale-sky">Smith Watson <small class="text-muted">( B.Tach  )</small></h5>
-                                        <small class="text-danger mb-0">Not Available</small>
-									</div>
-								</div>
-								<div class="media mb-2 align-items-center border-bottom pb-3">
-                                    <img class="mr-3 rounded-circle" alt="image" width="50" src="images/profile/education/pic5.jpg">
-                                    <div class="media-body">
-                                        <h5 class="mb-0 text-pale-sky">Morese Sharpe <small class="text-muted">( B.A, M.A )</small></h5>
-                                        <small class="text-primary mb-0">Available</small>
-									</div>
-								</div>
-								<div class="text-center pt-3">
-									<a href="javascript:void(0);" class="btn btn-primary btn-rounded btn px-5 btn-lg">View All</a>
-								</div>
-							</div>
-						</div>
-					</div> -->
 					
-					<div class="col-xl-8 col-lg-8 col-xxl-8 col-md-12">
-						<div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Student List</h4>
-                            </div>
-                            <div class="card-body">
-							    <div class="table-responsive recentOrderTable">
-                                    <table class="table verticle-middle table-responsive-md">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">
-                                                    <div class="custom-control custom-checkbox">
-														<input type="checkbox" class="custom-control-input" id="checkAll">
-														<label class="custom-control-label" for="checkAll"></label>
-													</div>
-                                                </th>
-                                                <th scope="col">Student Name</th>
-                                                <th scope="col">Assigned Coach</th>
-                                                <th scope="col">Date</th>
-                                                <th scope="col">Time</th>
-                                                <th scope="col">Actions</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="custom-control custom-checkbox">
-														<input type="checkbox" class="custom-control-input" id="checkbox2">
-														<label class="custom-control-label" for="checkbox2"></label>
-													</div>
-                                                </td>
-                                                <td>Angelica Ramos</td>
-                                                <td>Ashton Cox</td>
-                                                <td>12 August 2020</td>
-                                                <td>10:15</td>
-                                                <td>
-                                                    <div class="dropdown custom-dropdown mb-0">
-                                                        <div data-toggle="dropdown">
-                                                            <i class="fa fa-ellipsis-v"></i>
-                                                        </div>
-                                                        <div class="dropdown-menu dropdown-menu-right">
-                                                            <a class="dropdown-item" href="javascript:void(0);">Accept</a>
-                                                            <a class="dropdown-item" href="javascript:void(0);">Details</a>
-                                                            <a class="dropdown-item text-danger" href="javascript:void(0);">Cancel</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="custom-control custom-checkbox">
-														<input type="checkbox" class="custom-control-input" id="checkbox3">
-														<label class="custom-control-label" for="checkbox3"></label>
-													</div>
-                                                </td>
-                                                <td>Bradley Greer</td>
-                                                <td>Brenden Wagner</td>
-                                                <td>11 July 2020</td>
-                                                <td>10:00</td>
-                                                <td>
-                                                    <div class="dropdown custom-dropdown mb-0">
-                                                        <div data-toggle="dropdown">
-                                                            <i class="fa fa-ellipsis-v"></i>
-                                                        </div>
-                                                        <div class="dropdown-menu dropdown-menu-right">
-                                                            <a class="dropdown-item" href="javascript:void(0);">Accept</a>
-                                                            <a class="dropdown-item" href="javascript:void(0);">Details</a>
-                                                            <a class="dropdown-item text-danger" href="javascript:void(0);">Cancel</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="custom-control custom-checkbox">
-														<input type="checkbox" class="custom-control-input" id="checkbox4">
-														<label class="custom-control-label" for="checkbox4"></label>
-													</div>
-                                                </td>
-                                                <td>Cedric Kelly</td>
-                                                <td>Brielle Williamson</td>
-                                                <td>10 May 2020</td>
-                                                <td>09:45</td>
-                                                <td>
-                                                    <div class="dropdown custom-dropdown mb-0">
-                                                        <div data-toggle="dropdown">
-                                                            <i class="fa fa-ellipsis-v"></i>
-                                                        </div>
-                                                        <div class="dropdown-menu dropdown-menu-right">
-                                                            <a class="dropdown-item" href="javascript:void(0);">Accept</a>
-                                                            <a class="dropdown-item" href="javascript:void(0);">Details</a>
-                                                            <a class="dropdown-item text-danger" href="javascript:void(0);">Cancel</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="custom-control custom-checkbox">
-														<input type="checkbox" class="custom-control-input" id="checkbox5">
-														<label class="custom-control-label" for="checkbox5"></label>
-													</div>
-                                                </td>
-                                                <td>Caesar Vance</td>
-                                                <td>Herrod Chandler</td>
-                                                <td>09 April 2020</td>
-                                                <td>09:30</td>
-                                                <td>
-                                                    <div class="dropdown custom-dropdown mb-0">
-                                                        <div data-toggle="dropdown">
-                                                            <i class="fa fa-ellipsis-v"></i>
-                                                        </div>
-                                                        <div class="dropdown-menu dropdown-menu-right">
-                                                            <a class="dropdown-item" href="javascript:void(0);">Accept</a>
-                                                            <a class="dropdown-item" href="javascript:void(0);">Details</a>
-                                                            <a class="dropdown-item text-danger" href="javascript:void(0);">Cancel</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="custom-control custom-checkbox">
-														<input type="checkbox" class="custom-control-input" id="checkbox6">
-														<label class="custom-control-label" for="checkbox6"></label>
-													</div>
-                                                </td>
-                                                <td>Rhona Davidson</td>
-                                                <td>Sonya Frost</td>
-                                                <td>08 March 2020</td>
-                                                <td>09:15</td>
-                                                <td>
-                                                    <div class="dropdown custom-dropdown mb-0">
-                                                        <div data-toggle="dropdown">
-                                                            <i class="fa fa-ellipsis-v"></i>
-                                                        </div>
-                                                        <div class="dropdown-menu dropdown-menu-right">
-                                                            <a class="dropdown-item" href="javascript:void(0);">Accept</a>
-                                                            <a class="dropdown-item" href="javascript:void(0);">Details</a>
-                                                            <a class="dropdown-item text-danger" href="javascript:void(0);">Cancel</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-											<tr>
-                                                <td>
-                                                    <div class="custom-control custom-checkbox">
-														<input type="checkbox" class="custom-control-input" id="checkbox7">
-														<label class="custom-control-label" for="checkbox7"></label>
-													</div>
-                                                </td>
-                                                <td>Bradley Greer</td>
-                                                <td>Brenden Wagner</td>
-                                                <td>11 July 2020</td>
-                                                <td>10:00</td>
-                                                <td>
-                                                    <div class="dropdown custom-dropdown mb-0">
-                                                        <div data-toggle="dropdown">
-                                                            <i class="fa fa-ellipsis-v"></i>
-                                                        </div>
-                                                        <div class="dropdown-menu dropdown-menu-right">
-                                                            <a class="dropdown-item" href="javascript:void(0);">Accept</a>
-                                                            <a class="dropdown-item" href="javascript:void(0);">Details</a>
-                                                            <a class="dropdown-item text-danger" href="javascript:void(0);">Cancel</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-							</div>
-						</div>
-					</div>
 					<div class="row">
                         <div class="col-lg-6">
                             <div class="card">
@@ -583,10 +345,105 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-6">
                             <div class="card">
-                                <div class="card-body">
+                                <div class="card-body" style="overflow-y: scroll; height:700px;">
                                     <h4 class="card-intro-title">Berita Sekolah</h4>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="row m-b-30">
+                                                        <div class="col-md-5">
+                                                            <div class="new-arrival-product">
+                                                                <div class="new-arrivals-img-contnent">
+                                                                    <img class="img-fluid rounded-sm" width="100%" src="https://cdn.antaranews.com/cache/800x533/2014/08/20140811Kegiatan-Perjusami-080814-ADB-4xx.jpg" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <div class="new-arrival-content position-relative">
+                                                                <h4>Perjusa 2022</h4>
+                                                                <p class="price">20 November 2022</p>
+                                                                <p class="text-content">TATA TERTIB PESERTA PERKEMAHAN JUMAT-SABTU
+                                                                    SMP NEGERI 5 SURABAYA</p>
+                                                                    <p><a href="#">Baca selengkapnya ...</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="row m-b-30">
+                                                        <div class="col-md-5">
+                                                            <div class="new-arrival-product">
+                                                                <div class="new-arrivals-img-contnent">
+                                                                    <img class="rounded-sm" src="http://www.smpn5sby.sch.id/DCIM/site/HematEnergi.jpg" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <div class="new-arrival-content position-relative">
+                                                                <h4>Mari Hemat Energi!</h4>
+                                                                <p class="price">18 November 2022</p>
+                                                                <p class="text-content">Dalam rangka mengikuti lomba hemat energi yang diadakan oleh dinas lingkungan hidup Kota Surabaya, maka seluruh sekolah SMP Negeri wajib mengikuti lomba hemat energi, baik itu konservasi listrik maupun konservasi air. Diharapkan seluruh siswa-siswi SMP Negeri 5 ini peduli akan energi. Kenapa? Karena salah satu kebutuhan manusia adalah energi, terutama di daerah perkotaan adalah segala aktivitas dan kebutuhan itu memanfaatkan energi listrik. SMP Negeri 5 ini sudah memahami akan pentingnya manfaat energi bagi kehidupan. Salah satu yang harus dilakukan dalam upaya penghematan energi adalah kegiatan 3M yaitu, mencabut, mematikan, memanfaatkan.</p>
+                                                                <p><a href="#">Baca selengkapnya ...</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="row m-b-30">
+                                                        <div class="col-md-5">
+                                                            <div class="new-arrival-product">
+                                                                <div class="new-arrivals-img-contnent">
+                                                                    <img class="img-fluid rounded-sm" src="http://galeri.smpn5sby.sch.id/site/cintasatwa2022.JPG" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <div class="new-arrival-content position-relative">
+                                                                <h4>Cinta Satwa</h4>
+                                                                <p class="price">10 November 2022</p>
+                                                                <p class="text-content">Peringatan Hari Cinta Puspa dan Satwa (5 November) - Usai mengikuti upacara peringatan hari pahlawan pada 10 November 2022 para kader lingkungan SMP Negeri 5 Surabaya memenuhi agenda tahunannya yaitu melepas ikan-ikan yang secara simbolis menunjukkan kecintaan kader terhadap satwa.</p>
+                                                                <p><a href="#">Baca selengkapnya ...</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="row m-b-30">
+                                                        <div class="col-md-5">
+                                                            <div class="new-arrival-product">
+                                                                <div class="new-arrivals-img-contnent">
+                                                                    <img class="img-fluid rounded-sm" src="https://cdn.antaranews.com/cache/800x533/2014/08/20140811Kegiatan-Perjusami-080814-ADB-4xx.jpg" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <div class="new-arrival-content position-relative">
+                                                                <h4>Manfaatkan Sampah Organik!</h4>
+                                                                <p class="price">30 Oktober 2022</p>
+                                                                <p class="text-content">Sampah plastik masih menjadi momok bagi lingkungan. Sugesti buruk mengenai sampah plastik masih melekat di benak masyarakat. Plastik merupakan molekul poliester yang sulit diurai oleh tanah secara alami. Maka dari itu, dibutuhkan campur tangan manusia untuk mengolahnya. SMP Negeri 5 Surabaya menggunakan metode ecobrick untuk mendaur ulang plastik.</p>
+                                                                <p><a href="#">Baca selengkapnya ...</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -644,197 +501,6 @@
                             </div>
                         </div>
                     </div>
-					
-					<div class="col-xl-12 col-lg-12 col-xxl-12 col-md-12">
-						<div class="card profile-tab">
-                            <div class="card-header">
-                                <h4 class="card-title">Salary Status</h4>
-                            </div>
-							<div class="card-body custom-tab-1">
-								<ul class="nav nav-tabs mb-3">
-									<li class="nav-item"><a href="#my-posts" data-toggle="tab" class="nav-link pb-2 active show">Professors</a></li>
-									<li class="nav-item"><a href="#about-me" data-toggle="tab" class="nav-link pb-2">Librarian</a></li>
-									<li class="nav-item"><a href="#profile-settings" data-toggle="tab" class="nav-link pb-2">Other</a></li>
-								</ul>
-								<div class="tab-content">
-									<div id="my-posts" class="tab-pane fade active show">
-										<div class="table-responsive">
-											<table class="table table-responsive-md">
-												<thead>
-													<tr>
-														<th scope="col">#</th>
-														<th scope="col">Name</th>
-														<th scope="col">Status</th>
-														<th scope="col">Date</th>
-														<th scope="col">Ammount</th>
-														<th scope="col">Transaction ID</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td><img src="images/profile/education/pic1.jpg" class="rounded-circle" width="35" alt=""></td>
-														<td>Angelica Ramos</td>
-														<td><span class="badge badge-rounded badge-success">Paid</span></td>
-														<td>12 August 2020</td>
-														<td>$100</td>
-														<td>#42317</td>
-													</tr>
-													<tr>
-														<td><img src="images/profile/education/pic2.jpg" class="rounded-circle" width="35" alt=""></td>
-														<td>Bradley Greer</td>
-														<td><span class="badge badge-rounded badge-danger">Unpaid</span></td>
-														<td>11 July 2020</td>
-														<td>$200</td>
-														<td>#54682</td>
-													</tr>
-													<tr>
-														<td><img src="images/profile/education/pic3.jpg" class="rounded-circle" width="35" alt=""></td>
-														<td>Cedric Kelly</td>
-														<td><span class="badge badge-rounded badge-warning">Pending</span></td>
-														<td>10 May 2020</td>
-														<td>$400</td>
-														<td>#57894</td>
-													</tr>
-													<tr>
-														<td><img src="images/profile/education/pic4.jpg" class="rounded-circle" width="35" alt=""></td>
-														<td>Caesar Vance</td>
-														<td><span class="badge badge-rounded badge-danger">Unpaid</span></td>
-														<td>09 April 2020</td>
-														<td>$300</td>
-														<td>#57864</td>
-													</tr>
-													<tr>
-														<td><img src="images/profile/education/pic5.jpg" class="rounded-circle" width="35" alt=""></td>
-														<td>Rhona Davidson</td>
-														<td><span class="badge badge-rounded badge-warning">Pending</span></td>
-														<td>08 March 2020</td>
-														<td>$500</td>
-														<td>#56387</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-									<div id="about-me" class="tab-pane fade">
-										<div class="table-responsive">
-											<table class="table table-responsive-md">
-												<thead>
-													<tr>
-														<th scope="col">#</th>
-														<th scope="col">Name</th>
-														<th scope="col">Status</th>
-														<th scope="col">Date</th>
-														<th scope="col">Ammount</th>
-														<th scope="col">Transaction ID</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td><img src="images/profile/education/pic6.jpg" class="rounded-circle" width="35" alt=""></td>
-														<td>Angelica Ramos</td>
-														<td><span class="badge badge-rounded badge-success">Paid</span></td>
-														<td>12 August 2020</td>
-														<td>$100</td>
-														<td>#42317</td>
-													</tr>
-													<tr>
-														<td><img src="images/profile/education/pic7.jpg" class="rounded-circle" width="35" alt=""></td>
-														<td>Bradley Greer</td>
-														<td><span class="badge badge-rounded badge-danger">Unpaid</span></td>
-														<td>11 July 2020</td>
-														<td>$200</td>
-														<td>#54682</td>
-													</tr>
-													<tr>
-														<td><img src="images/profile/education/pic8.jpg" class="rounded-circle" width="35" alt=""></td>
-														<td>Cedric Kelly</td>
-														<td><span class="badge badge-rounded badge-warning">Pending</span></td>
-														<td>10 May 2020</td>
-														<td>$400</td>
-														<td>#57894</td>
-													</tr>
-													<tr>
-														<td><img src="images/profile/education/pic10.jpg" class="rounded-circle" width="35" alt=""></td>
-														<td>Caesar Vance</td>
-														<td><span class="badge badge-rounded badge-danger">Unpaid</span></td>
-														<td>09 April 2020</td>
-														<td>$300</td>
-														<td>#57864</td>
-													</tr>
-													<tr>
-														<td><img src="images/profile/education/pic9.jpg" class="rounded-circle" width="35" alt=""></td>
-														<td>Rhona Davidson</td>
-														<td><span class="badge badge-rounded badge-warning">Pending</span></td>
-														<td>08 March 2020</td>
-														<td>$500</td>
-														<td>#56387</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-									<div id="profile-settings" class="tab-pane fade">
-										<div class="table-responsive">
-											<table class="table table-responsive-md">
-												<thead>
-													<tr>
-														<th scope="col">#</th>
-														<th scope="col">Name</th>
-														<th scope="col">Status</th>
-														<th scope="col">Date</th>
-														<th scope="col">Ammount</th>
-														<th scope="col">Transaction ID</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td><img src="images/profile/education/pic5.jpg" class="rounded-circle" width="35" alt=""></td>
-														<td>Angelica Ramos</td>
-														<td><span class="badge badge-rounded badge-success">Paid</span></td>
-														<td>12 August 2020</td>
-														<td>$100</td>
-														<td>#42317</td>
-													</tr>
-													<tr>
-														<td><img src="images/profile/education/pic8.jpg" class="rounded-circle" width="35" alt=""></td>
-														<td>Bradley Greer</td>
-														<td><span class="badge badge-rounded badge-danger">Unpaid</span></td>
-														<td>11 July 2020</td>
-														<td>$200</td>
-														<td>#54682</td>
-													</tr>
-													<tr>
-														<td><img src="images/profile/education/pic6.jpg" class="rounded-circle" width="35" alt=""></td>
-														<td>Cedric Kelly</td>
-														<td><span class="badge badge-rounded badge-warning">Pending</span></td>
-														<td>10 May 2020</td>
-														<td>$400</td>
-														<td>#57894</td>
-													</tr>
-													<tr>
-														<td><img src="images/profile/education/pic2.jpg" class="rounded-circle" width="35" alt=""></td>
-														<td>Caesar Vance</td>
-														<td><span class="badge badge-rounded badge-danger">Unpaid</span></td>
-														<td>09 April 2020</td>
-														<td>$300</td>
-														<td>#57864</td>
-													</tr>
-													<tr>
-														<td><img src="images/profile/education/pic7.jpg" class="rounded-circle" width="35" alt=""></td>
-														<td>Rhona Davidson</td>
-														<td><span class="badge badge-rounded badge-warning">Pending</span></td>
-														<td>08 March 2020</td>
-														<td>$500</td>
-														<td>#56387</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
             </div>
         </div>
@@ -887,29 +553,16 @@
 	
 		<!-- Demo scripts -->
     <script src="js/dashboard/dashboard-2.js"></script>
-	
-	<!-- Svganimation scripts -->
+
+    <!-- Svganimation scripts -->
     <script src="vendor/svganimation/vivus.min.js"></script>
     <script src="vendor/svganimation/svg.animation.js"></script>
     <script src="js/styleSwitcher.js"></script>
-
-    <!-- Calendar -->
-    <script src="vendor/fullcalendar/js/fullcalendar.min.js"></script>
-    <script src="js/plugins-init/fullcalendar-init.js"></script>
-
-  
-	<script src="js/dlabnav-init.js"></script>
-    <!--removeIf(production)-->
-
 	
     <script src="vendor/jqueryui/js/jquery-ui.min.js"></script>
     <script src="vendor/moment/moment.min.js"></script>
 
     <script src="vendor/fullcalendar/js/fullcalendar.min.js"></script>
     <script src="js/plugins-init/fullcalendar-init.js"></script>
-	
-
-		
-	
 </body>
 </html>
