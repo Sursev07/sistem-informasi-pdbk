@@ -9023,7 +9023,7 @@ a {
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #fff;
+  background-color: #2b2470;
   transition: all .2s ease;
   z-index: 4; }
   .nav-header .logo-abbr {
@@ -9180,7 +9180,7 @@ a {
   z-index: 1;
   position: relative;
   padding: 0rem;
-  background-color: #fff;
+  background-color: #4D44B5;
   z-index: 3;
   padding-left: 17.1875rem;
   transition: all .2s ease;
@@ -9424,7 +9424,7 @@ svg.pulse-svg {
       position: static; } }
   .header-right .notification_dropdown .nav-link {
     position: relative;
-    color: #464a53; }
+    color: #fff; }
     .header-right .notification_dropdown .nav-link i {
       font-size: 18px;
       font-weight: 700; }
@@ -11495,7 +11495,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
   top: 5rem;
   padding-top: 0;
   z-index: 2;
-  background-color: #fff;
+  background-color: #4D44B5;
   transition: all .2s ease;
   box-shadow: 0px 0px 40px 0px rgba(82, 63, 105, 0.1); }
   @media only screen and (max-width: 767px) {
@@ -11536,7 +11536,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
           display: block;
           padding: 0; }
       .dlabnav .metismenu > li > a {
-        color: #111;
+        color: rgba(255, 255, 255, 0.7);
         font-weight: 600;
         display: inline-block; }
         .dlabnav .metismenu > li > a svg {
@@ -11555,9 +11555,9 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
           color: #7356f1; }
           @media only screen and (min-width: 1200px) {
             .dlabnav .metismenu > li:hover > a, .dlabnav .metismenu > li:focus > a {
-              background-color: #fff; } }
+              background-color: #2b2470; } }
       .dlabnav .metismenu > li.mm-active {
-        background: #fff;
+        background: #2b2470;
         border-radius: 4px;
         box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.05);
         padding: 12px 0; }
@@ -13072,7 +13072,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 
 [data-nav-headerbg="color_11"][data-theme-version="dark"] .nav-header,
 [data-nav-headerbg="color_11"] .nav-header {
-  background-color: #6673fd; }
+  background-color: #2b2470; }
   [data-nav-headerbg="color_11"][data-theme-version="dark"] .nav-header .brand-logo,
   [data-nav-headerbg="color_11"] .nav-header .brand-logo {
     color: #fff; }
@@ -14585,7 +14585,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 
 [data-headerbg="color_1"] .nav-header .hamburger.is-active .line,
 [data-headerbg="color_1"] .nav-header .hamburger .line {
-  background: #7356f1 !important; }
+  background: #fff !important; }
 
 @media (min-width: 992px) {
   [data-container="boxed"] #main-wrapper {
