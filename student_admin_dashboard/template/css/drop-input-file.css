@@ -34,11 +34,11 @@
   left: 0;  pointer-events: none;
   width: 100%;
   right: 0;
-  height: 57px;
+  height: 30px;
   content: " or drag it here. ";
   display: block;
   margin: 0 auto;
-  color: #2ea591;
+  color: #92b0b3;
   font-weight: 600;
   text-transform: capitalize;
   text-align: center;
