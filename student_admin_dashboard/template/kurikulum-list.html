@@ -6,37 +6,63 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>SisPenma - Bootstrap Admin Dashboard </title>
+    <title>Sispenma - Kurikulum</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-	<link rel="stylesheet" href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css">
+	<!-- Datatable -->
+    <link href="vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/skin.css">
-    <link href="vendor/fullcalendar/css/fullcalendar.min.css" rel="stylesheet">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	
     <style>
-        #avatar {
-            /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
-            background-image: url('http://i.stack.imgur.com/Dj7eP.jpg');
-
-            /* make a square container */
-            width: 150px;
-            height: 150px;
-
-            /* fill the container, preserving aspect ratio, and cropping to fit */
-            background-size: cover;
-
-            /* center the image vertically and horizontally */
-            background-position: top center;
-
-            /* round the edges to a circle with border radius 1/2 container size */
-            border-radius: 50%;
+    .file-drop-area {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 450px;
+        max-width: 100%;
+        padding: 25px;
+        border: 1px dashed #57329a;
+        border-radius: 3px;
+        transition: 0.2s;
+        text-align: center;
         }
 
-        .btn-detail-mapel{
-            color:orange !important;
+        .choose-file-button {
+        flex-shrink: 0;
+        background-color: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+        padding: 8px 15px;
+        margin-right: 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+        }
+
+        .file-message {
+        font-size: small;
+        font-weight: 300;
+        line-height: 1.4;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        }
+
+        .file-input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        opacity: 0;
+        
         }
     </style>
 </head>
+
 <body>
 
     <!--*******************
@@ -85,7 +111,16 @@
                 <nav class="navbar navbar-expand">
                     <div class="collapse navbar-collapse justify-content-between">
                         <div class="header-left">
-                           
+                            <div class="search_bar dropdown">
+                                <span class="search_icon p-3 c-pointer" data-toggle="dropdown">
+                                    <i class="mdi mdi-magnify"></i>
+                                </span>
+                                <div class="dropdown-menu p-0 m-0">
+                                    <form>
+                                        <input class="form-control" type="search" placeholder="Cari" aria-label="Cari">
+                                    </form>
+                                </div>
+                            </div>
                         </div>
 
                         <ul class="navbar-nav header-right">
@@ -192,31 +227,26 @@
 							<span class="nav-text">Beranda</span>
 						</a>
                     </li>
+                    <li>
+                        <a class="" href="students-page/list-students.html" aria-expanded="false">
+                          <i class="la la-users"></i>
+                          <span class="nav-text">Siswa</span>
+                        </a>
+                    </li>
                     <li><a class="" href="javascript:void()" aria-expanded="false">
-                        <i class="la la-users"></i>
-                        <span class="nav-text">Siswa</span>
+                        <i class="la la-book"></i>
+                        <span class="nav-text">Materi Pembelajaran</span>
                     </a>
                     <ul aria-expanded="false">
-                        <li><a href="all-students.html">All Students</a></li>
-                        <li><a href="add-student.html">Add Students</a></li>
-                        <li><a href="edit-student.html">Edit Students</a></li>
-                        <li><a href="about-student.html">About Students</a></li>
+                        <li><a href="all-library.html">Daftar Materi</a></li>
+                        <li><a href="add-library.html">Tambah Materi</a></li>
                     </ul>
-                </li>
-                <li><a class="" href="javascript:void()" aria-expanded="false">
-                    <i class="la la-book"></i>
-                    <span class="nav-text">Materi Pembelajaran</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="all-library.html">Daftar Materi</a></li>
-                    <li><a href="add-library.html">Tambah Materi</a></li>
-                </ul>
-                </li>
-					<li><a class="ai-icon" href="event-management.html" aria-expanded="false">
-							<i class="la la-calendar"></i>
-							<span class="nav-text">Agenda Konsultasi</span>
-						</a>
                     </li>
+                        <li><a class="ai-icon" href="event-management.html" aria-expanded="false">
+                                <i class="la la-calendar"></i>
+                                <span class="nav-text">Agenda Konsultasi</span>
+                            </a>
+                        </li>
                     <li><a class="" href="kurikulum-list.html" aria-expanded="false">
                         <i class="la la-building"></i>
                         <span class="nav-text">Kurikulum</span>
@@ -227,175 +257,121 @@
                     <i class="la la-graduation-cap"></i>
                     <span class="nav-text">Laporan Perkembangan</span>
                 </a>
-            </li>
 				</ul>
             </div>
         </div>
         <!--**********************************
             Sidebar end
         ***********************************-->
+
 		
-		<!--**********************************
+		
+        <!--**********************************
             Content body start
         ***********************************-->
         <div class="content-body">
             <!-- row -->
             <div class="container-fluid">
-				    
-                <div class="row">
-                    <div class="col-xl-4 col-xxl-4 col-lg-4">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Angkatan</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="basic-form">
-                                    <form>
-                                        <div class="form-group">
-                                            <select class="form-control form-control-lg">
-                                                <option>2022/2023</option>
-                                                <option>2020/2021</option>
-                                                <option>2019/2020</option>
-                                            </select>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-					</div>
-
-                    <div class="col-xl-4 col-xxl-4 col-lg-4">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Semester</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="basic-form">
-                                    <form>
-                                        <div class="form-group">
-                                            <select class="form-control form-control-lg">
-                                                <option>Ganjil</option>
-                                                <option>Genap</option>
-                                            </select>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-					</div>
-
-                    <div class="col-xl-4 col-xxl-4 col-lg-4">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Kelas</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="basic-form">
-                                    <form>
-                                        <div class="form-group">
-                                            <select class="form-control form-control-lg">
-                                                <option>VII</option>
-                                                <option>VIII</option>
-                                                <option>IX</option>
-                                            </select>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-					</div>
-
-                </div>
-                <div class="row">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="new-arrival-product">
-                                        <div class="new-arrivals-img-contnent">
-                                            <img class="" src="https://cdn.dribbble.com/users/102859/screenshots/13814121/media/8240cb1715cf3e8687849e6c93878f99.png?compress=1&resize=1600x1200&vertical=top" alt="" id="avatar">
-                                        </div>
-                                        <div class="product-content text-center mt-3">
-                                            <h5>VII A</h5>
-                                            <div class="basic-form">
-                                                <button type="submit" class="btn btn-primary mb-2 "><a class="btn-detail-mapel" href="laporan-perkembangan-list-mapel.html">Detail</a></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="new-arrival-product">
-                                        <div class="new-arrivals-img-contnent">
-                                            <img class="" src="https://cdn.dribbble.com/users/102859/screenshots/13814121/media/8240cb1715cf3e8687849e6c93878f99.png?compress=1&resize=1600x1200&vertical=top" alt="" id="avatar">
-                                        </div>
-                                        <div class="product-content text-center mt-3">
-                                            <h5>VII B</h5>
-                                            <div class="basic-form">
-                                                <button type="submit" class="btn btn-primary mb-2"><a class="btn-detail-mapel" href=laporan-perkembangan-list-mapel.html">Detail</a></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="new-arrival-product">
-                                        <div class="new-arrivals-img-contnent">
-                                            <img class="" src="https://cdn.dribbble.com/users/102859/screenshots/13814121/media/8240cb1715cf3e8687849e6c93878f99.png?compress=1&resize=1600x1200&vertical=top" alt="" id="avatar">
-                                        </div>
-                                        <div class="product-content text-center mt-3">
-                                            <h5>VII C</h5>
-                                            <div class="basic-form">
-                                                <button type="submit" class="btn btn-primary mb-2"><a class="btn-detail-mapel" href=laporan-perkembangan-list-mapel.html">Detail</a></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="new-arrival-product">
-                                        <div class="new-arrivals-img-contnent">
-                                            <img class="" src="https://cdn.dribbble.com/users/102859/screenshots/13814121/media/8240cb1715cf3e8687849e6c93878f99.png?compress=1&resize=1600x1200&vertical=top" alt="" id="avatar">
-                                        </div>
-                                        <div class="product-content text-center mt-3">
-                                            <h5>VII D</h5>
-                                            <div class="basic-form">
-                                                <button type="submit" class="btn btn-primary mb-2"><a class="btn-detail-mapel" href=laporan-perkembangan-list-mapel.html">Detail</a></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="new-arrival-product">
-                                        <div class="new-arrivals-img-contnent">
-                                            <img class="" src="https://cdn.dribbble.com/users/102859/screenshots/13814121/media/8240cb1715cf3e8687849e6c93878f99.png?compress=1&resize=1600x1200&vertical=top" alt="" id="avatar">
-                                        </div>
-                                        <div class="product-content text-center mt-3">
-                                            <h5>VII E</h5>
-                                            <div class="basic-form">
-                                                <button type="submit" class="btn btn-primary mb-2"><a class="btn-detail-mapel" href=laporan-perkembangan-list-mapel.html">Detail</a></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+				
+				<div class="row page-titles mx-0">
+                    <div class="col-sm-6 p-md-0">
+                        <div class="welcome-text">
+                            <h4>Kurikulum</h4>
                         </div>
                     </div>
+                    <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+                            <li class="breadcrumb-item active"><a href="javascript:void(0);">Kurikulum</a></li>
+                            <li class="breadcrumb-item active"><a href="javascript:void(0);">Daftar</a></li>
+                        </ol>
+                    </div>
+                </div>
+				
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="card">
+							<div class="card-header">
+								<h4 class="card-title">Daftar Kurikulum</h4>
+								<a data-toggle="modal" data-target="#exampleModal" class="btn btn-primary">+ Tambah Baru</a>
+							</div>
+							<div class="card-body">
+								<div class="table-responsive">
+									<table id="example3" class="display" style="min-width: 845px">
+										<thead>
+											<tr>
+												<th>No.</th>
+												<th>Kurikulum</th>
+												<th>Acuan Kurikulum</th>
+												<th>Dibuat pada</th>
+												<th>Dibuat oleh</th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><strong>01</strong></td>
+												<td>2021/2022</td>
+												<td>Kurikulum 2013</td>
+												<td>11-11-2022</td>
+												<td>Paul Walker</td>
+												<td>
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#ModalHapus"><i class="la la-trash-o"></i></a>
+                                                </td>												
+											</tr>
+											<tr>
+												<td><strong>02</strong></td>
+												<td>2021/2022</td>
+												<td>Kurikulum 2013</td>
+												<td>11-11-2022</td>
+												<td>Paul Walker</td>
+												<td>
+                                                    <a href="/student_admin_dashboard/template/edit-library.html" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#ModalHapus"><i class="la la-trash-o"></i></a>
+                                                </td>
+											</tr>
+											<tr>
+												<td><strong>03</strong></td>
+												<td>2021/2022</td>
+												<td>Kurikulum 2013</td>
+												<td>11-11-2022</td>
+												<td>Paul Walker</td>
+												<td>
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#ModalHapus"><i class="la la-trash-o"></i></a>
+                                                </td>
+											</tr>
+											<tr>
+												<td><strong>04</strong></td>
+												<td>2021/2022</td>
+												<td>Kurikulum 2013</td>
+												<td>11-11-2022</td>
+												<td>Paul Walker</td>
+												<td>
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#ModalHapus"><i class="la la-trash-o"></i></a>
+                                                </td>
+											</tr>
+											<tr>
+												<td><strong>05</strong></td>
+												<td>2021/2022</td>
+												<td>Kurikulum 2013</td>
+												<td>11-11-2022</td>
+												<td>Paul Walker</td>
+												<td>
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#ModalHapus"><i class="la la-trash-o"></i></a>
+                                                </td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
+				
             </div>
         </div>
         <!--**********************************
@@ -423,6 +399,73 @@
            Support ticket button end
         ***********************************-->
 
+        <!-- Modal Add Kurikulum -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><i class="la la-upload"></i>&nbsp;Upload Kurikulum</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1"><b>Tahun Ajaran</b></label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>2022/2023</option>
+                                <option>2021/2022</option>
+                                <option>2020/2021</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect2"><b>Acuan Kurikulum</b></label>
+                            <select class="form-control" id="exampleFormControlSelect2">
+                                <option>Kurikulum Merdeka</option>
+                                <option>Kurikulum Berbasis Kompetensi (KBK) 2004</option>
+                                <option>Kurikulum 1994 dan Suplemen Kurikulum 1999</option>
+                                <option>Kurikulum 1984</option>
+                            </select>
+                        </div>
+                        <label for="file-input"><b>Upload File Kurikulum</b></label>
+                        <div class="file-drop-area">
+                            <input class="file-input" type="file" multiple>
+                                <span class="file-message">Masukkan file ke sini</span>
+                            </input>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Upload</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Modal Hapus Kurikulum -->
+        <div class="modal fade" id="ModalHapus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><i class="la la-trash-o"></i>&nbsp;Hapus Kurikulum</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    Anda yakin ingin menghapus data kurikulum?
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Hapus</button>
+                </div>
+            </div>
+            </div>
+        </div>
 
     </div>
     <!--**********************************
@@ -435,28 +478,16 @@
     <!-- Required vendors -->
     <script src="vendor/global/global.min.js"></script>
 	<script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-	<script src="js/custom.min.js"></script>
-		
-    <!-- Chart Morris plugin files -->
-    <script src="vendor/raphael/raphael.min.js"></script>
-    <script src="vendor/morris/morris.min.js"></script>
-		
+    <script src="js/custom.min.js"></script>
+    <script src="js/dlabnav-init.js"></script>	
 	
-	<!-- Chart piety plugin files -->
-    <script src="vendor/peity/jquery.peity.min.js"></script>
+	<!-- Datatable -->
+    <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="js/plugins-init/datatables.init.js"></script>
 	
-		<!-- Demo scripts -->
-    <script src="js/dashboard/dashboard-2.js"></script>
-
     <!-- Svganimation scripts -->
     <script src="vendor/svganimation/vivus.min.js"></script>
     <script src="vendor/svganimation/svg.animation.js"></script>
     <script src="js/styleSwitcher.js"></script>
-	
-    <script src="vendor/jqueryui/js/jquery-ui.min.js"></script>
-    <script src="vendor/moment/moment.min.js"></script>
-
-    <script src="vendor/fullcalendar/js/fullcalendar.min.js"></script>
-    <script src="js/plugins-init/fullcalendar-init.js"></script>
 </body>
 </html>
