@@ -276,7 +276,7 @@
                                     <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Tutup</button>
                                     <button type="button" class="btn btn-success save-event waves-effect waves-light">Tambah Agenda</button>
 
-                                    <button type="button" class="btn btn-danger delete-event waves-effect waves-light" data-dismiss="modal">Delete</button>
+                                    <button type="button" onclick="showAlert()" class="btn btn-danger delete-event waves-effect waves-light" data-dismiss="modal">Batalkan Agenda</button>
                                 </div>
                             </div>
                         </div>
@@ -374,6 +374,13 @@
 	
 </body>
 
+<script>
+    function showAlert() {
+      var myText = "Apakah anda yakin ingin membatalkan konsultasi ini?";
+      confirm(myText);
+      alert("berhasil dibatalkan")
+    }
+</script>
 </html>
 
 
