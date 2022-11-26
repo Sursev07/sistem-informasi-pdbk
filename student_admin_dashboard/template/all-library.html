@@ -239,7 +239,6 @@
 								<h4 class="card-title">Daftar Materi</h4>
 								<a href="add-library.html" class="btn btn-primary">+ Tambah Baru</a>
 							</div>
-                            
 							<div class="card-body">
 								<div class="table-responsive">
 									<table id="example3" class="display" style="min-width: 845px">
@@ -254,15 +253,15 @@
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
+											<tr id="hapus">
 												<td><strong>01</strong></td>
 												<td>Berhitung</td>
 												<td>Matematika</td>
 												<td>2013</td>
 												<td>9 Tahun lalu</td>
 												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
+                                                    <a href="/student_admin_dashboard/template/edit-library.html" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
+                                                    <a href="javascript:void(0);" onclick="showAlert(1)" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
                                                 </td>												
 											</tr>
 											<tr>
@@ -273,7 +272,7 @@
 												<td>2 Tahun Lalu</td>
 												<td>
                                                     <a href="/student_admin_dashboard/template/edit-library.html" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
+                                                    <a href="javascript:void(0);" onclick="showAlert(2)" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
                                                 </td>
 											</tr>
 											<tr>
@@ -283,8 +282,8 @@
 												<td>2013</td>
 												<td>2 Tahun Lalu</td>
 												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
+                                                    <a href="/student_admin_dashboard/template/edit-library.html" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
+                                                    <a href="javascript:void(0);" onclick="showAlert(3)" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
                                                 </td>
 											</tr>
 											<tr>
@@ -294,8 +293,8 @@
 												<td>2013</td>
 												<td>9 Tahun lalu</td>
 												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
+                                                    <a href="/student_admin_dashboard/template/edit-library.html" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
+                                                    <a href="javascript:void(0);" onclick="showAlert(4)" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
                                                 </td>
 											</tr>
 											<tr>
@@ -305,8 +304,8 @@
 												<td>2013</td>
 												<td>9 Tahun Lalu</td>
 												<td>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
+                                                    <a href="/student_admin_dashboard/template/edit-library.html" class="btn btn-sm btn-primary"><i class="la la-pencil"></i></a>
+                                                    <a href="javascript:void(0);" onclick="showAlert(5)" class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
                                                 </td>
 											</tr>
 										</tbody>
@@ -369,4 +368,18 @@
     <script src="js/styleSwitcher.js"></script>
 	
 </body>
-</html>
+</html><script>
+    function showAlert(no) {
+      var myText = "Apakah anda yakin ingin menghapus materi ini?";
+      if (confirm(myText) == true) 
+      {
+        alert("berhasil dihapus")
+        document.getElementById("example3").deleteRow(no);
+      } 
+      else 
+      {
+        return false;
+      }
+      
+    }
+</script>
