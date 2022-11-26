@@ -10,12 +10,10 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
     <link rel="stylesheet" href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css">
+	<!-- Datatable -->
+    <link href="vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 	
-	<!-- Pick date -->
-    <link rel="stylesheet" href="vendor/pickadate/themes/default.css">
-    <link rel="stylesheet" href="vendor/pickadate/themes/default.date.css">
-
 </head>
 
 <body>
@@ -218,18 +216,18 @@
         <div class="content-body">
             <!-- row -->
             <div class="container-fluid">
-				    
-                <div class="row page-titles mx-0">
+				
+				<div class="row page-titles mx-0">
                     <div class="col-sm-6 p-md-0">
                         <div class="welcome-text">
-                            <h4>Tambah Materi Pembelajaran</h4>
+                            <h4>Materi Pembelajaran</h4>
                         </div>
                     </div>
                     <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
                             <li class="breadcrumb-item active"><a href="javascript:void(0);">Materi Pembelajaran</a></li>
-                            <li class="breadcrumb-item active"><a href="javascript:void(0);">Tambah</a></li>
+                            <li class="breadcrumb-item active"><a href="javascript:void(0);">Daftar</a></li>
                         </ol>
                     </div>
                 </div>
@@ -238,65 +236,84 @@
 					<div class="col-lg-12">
 						<div class="card">
 							<div class="card-header">
-								<h4 class="card-title">Tambah Materi Pembelajaran</h4>
+								<h4 class="card-title">Daftar Materi</h4>
 							</div>
 							<div class="card-body">
-								<form action="#" method="post">
-									<div class="row">
-										<div class="col-lg-6 col-md-6 col-sm-12">
-											<div class="form-group">
-												<label class="form-label">Judul Materi</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-lg-6 col-md-6 col-sm-12">
-											<div class="form-group">
-												<label class="form-label">Subject</label>
-												<select class="form-control">
-													<option value="Subject">Mata Pelajaran</option>
-													<option value="Matematika">Matematika</option>
-													<option value="Bahasa Indonesia">Bahasa Indonesia</option>
-													<option value="Sains">Sains</option>
-													<option value="IPS">IPS</option>
-													<option value="Bahasa Inggris">Bahasa Inggris</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-lg-6 col-md-6 col-sm-12">
-											<div class="form-group">
-												<label class="form-label">Kurikulum</label>
-												<select class="form-control">
-													<option value="Subject">Pilih Kurikulum</option>
-													<option value="KTSP">KTSP</option>
-													<option value="2013">2013</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-lg-6 col-md-6 col-sm-12">
-											<div class="form-group">
-												<label class="form-label">Guru Pengampu</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-lg-12 col-md-12 col-sm-12">
-											<div class="form-group">
-												<label class="form-label">Detail Materi</label>
-												<textarea class="form-control" rows="5"></textarea>
-											</div>
-										</div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12">
-											<div class="form-group">
-												<label class="form-label">Upload Materi</label>
-                                                <br><label>Silahkan upload menggunakan template yang sesuai! Template dapat didownload disini: </label> <a href="add-library.html" class=" btn-info">Download Template</a>
-                                                <input type="file" class="form-control">
-											</div>
-										</div>
-										<div class="col-lg-12 col-md-12 col-sm-12">
-											<button type="submit" class="btn btn-primary">Simpan</button>
-											<button type="submit" class="btn btn-light">Batal</button>
-										</div>
-									</div>
-								</form>
+								<div class="table-responsive">
+									<table id="example3" class="display" style="min-width: 845px">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>Materi</th>
+												<th>Mata Pelajaran</th>
+												<th>Kurikulum</th>
+												<th>Update Terakhir</th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><strong>01</strong></td>
+												<td>Berhitung</td>
+												<td>Matematika</td>
+												<td>2013</td>
+												<td>9 Tahun lalu</td>
+												<td>
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-eye"></i></a>
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary">Unduh</a>
+                                                </td>												
+											</tr>
+											<tr>
+												<td><strong>02</strong></td>
+												<td>Membaca</td>
+												<td>Bahasa Indonesia</td>
+												<td>2013</td>
+												<td>2 Tahun Lalu</td>
+												<td>
+                                                    <a href="/student_admin_dashboard/template/edit-library.html" class="btn btn-sm btn-primary"><i class="la la-eye"></i></a>
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary">Unduh</a>
+
+                                                </td>
+											</tr>
+											<tr>
+												<td><strong>03</strong></td>
+												<td>Menulis</td>
+												<td>Bahasa Indonesia</td>
+												<td>2013</td>
+												<td>2 Tahun Lalu</td>
+												<td>
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-eye"></i></a>
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary">Unduh</a>
+
+                                                </td>
+											</tr>
+											<tr>
+												<td><strong>04</strong></td>
+												<td>Perkalian</td>
+												<td>Matematika</td>
+												<td>2013</td>
+												<td>9 Tahun lalu</td>
+												<td>
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-eye"></i></a>
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary">Unduh</a>
+
+                                                </td>
+											</tr>
+											<tr>
+												<td><strong>05</strong></td>
+												<td>Matematika Dasar</td>
+												<td>Matematika</td>
+												<td>2013</td>
+												<td>9 Tahun Lalu</td>
+												<td>
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="la la-eye"></i></a>
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary">Unduh</a>
+
+                                                </td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -339,23 +356,19 @@
         Scripts
     ***********************************-->
     <!-- Required vendors -->
-<script src="vendor/global/global.min.js"></script>
+    <script src="vendor/global/global.min.js"></script>
 	<script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
     <script src="js/custom.min.js"></script>
-	<script src="js/dlabnav-init.js"></script>
-
-	<!-- Svganimation scripts -->
+    <script src="js/dlabnav-init.js"></script>	
+	
+	<!-- Datatable -->
+    <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="js/plugins-init/datatables.init.js"></script>
+	
+    <!-- Svganimation scripts -->
     <script src="vendor/svganimation/vivus.min.js"></script>
     <script src="vendor/svganimation/svg.animation.js"></script>
     <script src="js/styleSwitcher.js"></script>
-	
-	<!-- pickdate -->
-    <script src="vendor/pickadate/picker.js"></script>
-    <script src="vendor/pickadate/picker.time.js"></script>
-    <script src="vendor/pickadate/picker.date.js"></script>
-	
-	<!-- Pickdate -->
-    <script src="js/plugins-init/pickadate-init.js"></script>
 	
 </body>
 </html>

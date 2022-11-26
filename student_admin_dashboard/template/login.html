@@ -43,7 +43,7 @@
             <div class="p-5 mt-4" style="background-color: #C1BBEB; border-radius: 18px;">
               <h3 class="text-center">Login</h3>
               <!-- start: form login-->
-              <form action="index.html">
+              <form onsubmit="login(event)">
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Email</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="masukkan alamat email">
@@ -55,6 +55,7 @@
                 <div class="d-flex align-items-end flex-column">
                   <button type="submit" class="btn btn-primary mt-2 rounded-pill">Submit</button>
                 </div>
+                <span id="err-msg" style="color:red; display: none;">Email atau Password yang anda masukkan salah</span>
               </form>
               <!-- end: form login -->
             </div>
@@ -105,6 +106,25 @@
 
     <script src="vendor/fullcalendar/js/fullcalendar.min.js"></script>
     <script src="js/plugins-init/fullcalendar-init.js"></script>
+
+    <script>
+      function login(event) {
+        event.preventDefault();
+        var email = $('#exampleInputEmail1').val();
+        var password = $('#exampleInputPassword1').val();
+
+        if (email == 'guru@mail.com' && password == 'guru123') {
+          return window.location = './index.html'
+        }
+
+        if (email == 'orangtua@mail.com' && password == 'orangtua123') {
+          return window.location = './index-parent.html';
+        }
+
+        $('#err-msg').show();
+
+      }
+    </script>
 
 </body>
 </html>
