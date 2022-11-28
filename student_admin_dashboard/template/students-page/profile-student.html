@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon.png">
     	<link href="../vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/skin.css" rel="stylesheet">
     <style>
         table {
             border-collapse:separate; 
@@ -44,10 +45,9 @@
             Nav header start
         ***********************************-->
         <div class="nav-header">
-            <a href="index.html" class="brand-logo">
-                <img class="logo-abbr" src="../images/logo-white.png" alt="">
-                <img class="logo-compact" src="../images/logo-text-white.png" alt="">
-                <img class="brand-title" src="../images/logo-text-white.png" alt="">
+            <a href="../index.html" class="brand-logo">
+                <span>Sispenma</span>
+                <img class="logo-abbr" src="../images/logo-white-2.png" alt="">
             </a>
 
             <div class="nav-control">
@@ -170,8 +170,8 @@
               <span class="nav-text">Beranda</span>
             </a>
                     </li>
-                    <li>
-                        <a class="" href="list-students.html" aria-expanded="false">
+                    <li class="mm-active active-no-child">
+                        <a class="mm-active" href="list-students.html" aria-expanded="false">
                           <i class="la la-users"></i>
                           <span class="nav-text">Siswa</span>
                         </a>
@@ -222,8 +222,8 @@
                     </div>
                     <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">App</a></li>
-                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Profile</a></li>
+                            <li class="breadcrumb-item"><a href="list-students.html">List Siswa</a></li>
+                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Profil Siswa</a></li>
                         </ol>
                     </div>
                 </div>
@@ -455,6 +455,7 @@
                                                                         <th style="width: 25%;">Catatan</th>
                                                                         <th>Tanggal</th>
                                                                         <th>Pemberi Catatan</th>
+                                                                        <th>Kelas</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -462,11 +463,13 @@
                                                                         <td>Terus tingkatkan ya cara membacanya! sudah bagus tapi masih butuh improve</td>
                                                                         <td>20-Okt-2022</td>
                                                                         <td>Bu Seven</td>
+                                                                        <td>VII A</td>
                                                                     </tr>
                                                                     <tr class="spacer">
                                                                         <td>Perbanyak buku-buku yang juga menunjang kemampuannya</td>
                                                                         <td>20-Okt-2022</td>
                                                                         <td>Bu Seven</td>
+                                                                        <td>VII A</td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
